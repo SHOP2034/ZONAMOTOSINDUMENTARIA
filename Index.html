@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de indumentaria para motociclistas: chaquetas, buzos, pantalones y más. ¡Encuentra todo lo que necesitas para tu estilo!">
+    <title>Zona Motos - Indumentaria para Motociclistas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("fondoindumentaria.jpg");
+            background-color: #f4f4f4;
+            background-size: 200px 200px;
+            animation: moverFondo 20s linear infinite;
+        }
+
+        @keyframes moverFondo {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 400px 0;
+            }
+        }
+
+        header {
+            background-color: #333;
+            color: green;
+            padding: 0;
+            text-align: center;
+        }
+
+        .header-image {
+            width: 100%;
+            height: auto;
+            background-image: url('zonamotosindumentaria.jpg');
+            background-size: cover;
+            background-position: center;
+            aspect-ratio: 16/9;
+        }
+
+        header p {
+            margin: 0;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .header-image {
+                aspect-ratio: 4/3;
+            }
+            header p {
+                font-size: 14px;
+                padding: 0.5rem;
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-start;
+            background-color: #444;
+            overflow-x: auto;
+            padding: 0.5rem 1rem;
+            gap: 10px;
+            white-space: nowrap;
+        }
+
+        nav a {
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            text-align: center;
+            font-size: 16px;
+            min-width: fit-content;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background-color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .product-image {
+            width: 300px;
+            height: 250px;
+            background-size: cover;
+            margin-right: 1rem;
+        }
+
+        .product img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+
+        @keyframes cambiarImagenChaquetas {
+            0%, 33% {
+                background-image: url('chaqueta1.jpg');
+            }
+            34%, 66% {
+                background-image: url('chaqueta2.jpg');
+            }
+            67%, 100% {
+                background-image: url('chaqueta3.jpg');
+            }
+        }
+
+        @keyframes cambiarImagenBuzos {
+            0%, 33% {
+                background-image: url('buzo1.jpg');
+            }
+            34%, 66% {
+                background-image: url('buzo2.jpg');
+            }
+            67%, 100% {
+                background-image: url('buzo3.jpg');
+            }
+        }
+
+        @keyframes cambiarImagenPantalones {
+            0%, 33% {
+                background-image: url('pantalon1.jpg');
+            }
+            34%, 66% {
+                background-image: url('pantalon2.jpg');
+            }
+            67%, 100% {
+                background-image: url('pantalon3.jpg');
+            }
+        }
+
+        @keyframes cambiarImagenGuantes {
+            0%, 33% {
+                background-image: url('guantes1.jpg');
+            }
+            34%, 66% {
+                background-image: url('guantes2.jpg');
+            }
+            67%, 100% {
+                background-image: url('guantes3.jpg');
+            }
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: row;
+                overflow-x: scroll;
+            }
+            nav a {
+                padding: 0.5rem;
+                font-size: 14px;
+            }
+            main {
+                padding: 1rem;
+            }
+            .product {
+                flex-direction: column;
+                text-align: center;
+            }
+            .product img {
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-image"></div>
+        <p>Tu tienda de confianza para indumentaria de motociclistas</p>
+    </header>
+
+    <nav>
+        <a href="#chaquetas">Chaquetas</a>
+        <a href="#buzos">Buzos</a>
+        <a href="#pantalones">Pantalones</a>
+        <a href="#guantes">Guantes</a>
+    </nav>
+
+    <main>
+        <section id="chaquetas" class="product">
+            <div class="product-image" style="animation: cambiarImagenChaquetas 12s infinite;"></div>
+            <div>
+                <h2>Chaquetas</h2>
+                <p>Descripción de las chaquetas disponibles.</p>
+            </div>
+        </section>
+
+        <section id="buzos" class="product">
+            <div class="product-image" style="animation: cambiarImagenBuzos 12s infinite;"></div>
+            <div>
+                <h2>Buzos</h2>
+                <p>Descripción de los buzos disponibles.</p>
+            </div>
+        </section>
+
+        <section id="pantalones" class="product">
+            <div class="product-image" style="animation: cambiarImagenPantalones 12s infinite;"></div>
+            <div>
+                <h2>Pantalones</h2>
+                <p>Descripción de los pantalones disponibles.</p>
+            </div>
+        </section>
+
+        <section id="guantes" class="product">
+            <div class="product-image" style="animation: cambiarImagenGuantes 12s infinite;"></div>
+            <div>
+                <h2>Guantes</h2>
+                <p>Descripción de los guantes disponibles.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Pago por transferencia. Servicios de envío disponibles.</p>
+        <p>&copy; 2025 Central Motos. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('nav a').forEach((anchor) => {
+            anchor.addEventListener('click', function(event) {
+                event.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
